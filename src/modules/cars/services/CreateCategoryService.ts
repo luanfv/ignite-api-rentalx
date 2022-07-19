@@ -12,7 +12,7 @@ class CreateCategoryService {
     this.categoriesRepository = categoriesRepository;
   }
 
-  execute({ name, description }: IRequest) {
+  execute({ name, description }: IRequest): void {
     const categoryExists = this.categoriesRepository.findByName(name);
 
     if (categoryExists) {
