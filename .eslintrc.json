@@ -20,6 +20,7 @@
       "prettier"
   ],
   "rules": {
+    "no-use-before-define": "off",
     "prettier/prettier": ["error", { "singleQuote": true }],
     "camelcase": "off",
     "import/no-unresolved": "error",
