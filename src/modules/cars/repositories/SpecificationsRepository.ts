@@ -1,9 +1,8 @@
-/* eslint-disable prettier/prettier */
 import { Specification } from '../model/Specification';
 import {
   ICreateSpecificationDTO,
   ISpecificationsRepository,
-} from './ISpecificationsRepository';
+} from './implementations/SpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[];
@@ -26,7 +25,7 @@ class SpecificationsRepository implements ISpecificationsRepository {
 
   findByName(name: string): Specification | undefined {
     const specification = this.specifications.find(
-      (specification) => specification.name === name,
+      (specification) => specification.name === name
     );
 
     return specification;

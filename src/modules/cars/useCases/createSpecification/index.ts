@@ -5,12 +5,10 @@ import { CreateSpecificationUseCase } from './CreateSpecificationUseCase';
 const specificationRepository = new SpecificationsRepository();
 
 const createSpecificationUseCase = new CreateSpecificationUseCase(
-  // eslint-disable-next-line prettier/prettier
-  specificationRepository,
+  specificationRepository
 );
 const createSpecificationController = new CreateSpecificationController(
-  // eslint-disable-next-line prettier/prettier
-  createSpecificationUseCase,
+  createSpecificationUseCase
 );
 
 export { createSpecificationController };

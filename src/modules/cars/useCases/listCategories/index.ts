@@ -6,8 +6,7 @@ const categoriesRepository = CategoriesRepository.getInstance();
 
 const listCategoryUseCase = new ListCategoriesUseCase(categoriesRepository);
 const listCategoriesController = new ListCategoriesController(
-  // eslint-disable-next-line prettier/prettier
-  listCategoryUseCase,
+  listCategoryUseCase
 );
 
 export { listCategoriesController };

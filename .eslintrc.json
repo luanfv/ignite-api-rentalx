@@ -1,28 +1,25 @@
 {
   "env": {
-      "es2020": true,
-      "node": true,
-      "jest": true
+    "es2020": true,
+    "node": true,
+    "jest": true
   },
   "extends": [
-      "prettier",
-      "airbnb-base",
-      "plugin:@typescript-eslint/recommended"
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module"
+    "ecmaVersion": 12,
+    "sourceType": "module"
   },
-  "plugins": [
-      "@typescript-eslint",
-      "eslint-plugin-import-helpers",
-      "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
     "no-use-before-define": "off",
-    "prettier/prettier": ["error", { "singleQuote": true }],
     "camelcase": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -52,6 +49,7 @@
     "import-helpers/order-imports": [
       "warn",
       {
+        // example configuration
         "newlinesBetween": "always",
         "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
         "alphabetize": { "order": "asc", "ignoreCase": true }
@@ -59,12 +57,12 @@
     ],
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.spec.js"] }
+      { "devDependencies": ["**/*.spec.ts"] }
     ]
   },
   "settings": {
-      "import/resolver": {
-          "typescript": {}
-      }
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

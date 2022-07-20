@@ -6,8 +6,7 @@ const categoriesRepository = CategoriesRepository.getInstance();
 
 const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 const createCategoryController = new CreateCategoryController(
-  // eslint-disable-next-line prettier/prettier
-  createCategoryUseCase,
+  createCategoryUseCase
 );
 
 export { createCategoryController };
