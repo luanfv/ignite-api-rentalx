@@ -9,7 +9,7 @@ class CreateSpecificationController {
     this.createSpecificationUseCase = createSpecificationUseCase;
   }
 
-  handle(request: Request, response: Response) {
+  handle(request: Request, response: Response): Response {
     try {
       const { name, description } = request.body;
 
